@@ -14,9 +14,9 @@ extension parseString on IconNames {
 /// How to use it:
 /// ```dart
 /// IconFont(IconNames.xxx);
-/// IconFont(IconNames.xxx, color: '#f00');
-/// IconFont(IconNames.xxx, colors: ['#f00', 'blue']);
-/// IconFont(IconNames.xxx, size: 30, color: '#000');
+/// IconFont(IconNames.xxx, color: Color(0xf00));
+/// IconFont(IconNames.xxx, colors: [Color(#f00), Colors.blue]);
+/// IconFont(IconNames.xxx, size: 30, color: Color(0x000));
 /// ```
 ///
 /// The name is dynamic to against server interface.
@@ -26,8 +26,8 @@ extension parseString on IconNames {
 /// ```
 class IconFont extends StatelessWidget {
   IconNames? name;
-  final String? color;
-  final List<String>? colors;
+  final Color? color;
+  final List<Color>? colors;
   final double size;
 
   IconFont(dynamic iconName, { this.size = #size#, this.color, this.colors }) {
@@ -41,8 +41,8 @@ class IconFont extends StatelessWidget {
     return iconName;
   }
 
-  static String getColor(int arrayIndex, String? color, List<String>? colors, String defaultColor) {
-    if (color != null && color.isNotEmpty) {
+  static Color getColor(int arrayIndex, Color? color, List<Color>? colors, Color defaultColor) {
+    if (color != null) {
       return color;
     }
 

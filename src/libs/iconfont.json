@@ -1,7 +1,7 @@
 {
-  "symbol_url": "请参考README.md，复制官网提供的JS链接",
-  "save_dir": "./lib/iconfont",
-  "trim_icon_prefix": "icon",
+  "symbol_url": "请参考README.md, 复制 iconfont 官网提供的 .js 链接",
+  "save_dir": "./lib/icon_font",
+  "trim_icon_prefix": "",
   "default_icon_size": 18,
   "null_safety": true
 }
